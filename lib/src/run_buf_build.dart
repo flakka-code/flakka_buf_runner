@@ -14,7 +14,7 @@ Future<String> runBufBuild(
   try {
     final args = <String>[
       'build',
-      '--output=$output}',
+      '--output=$output',
     ];
 
     final result = await Process.run(

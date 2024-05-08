@@ -16,6 +16,8 @@
   ],
   "useGitignore": true,
   "words": [
+    "buf",
+    "flakka",
     "flakka_buf_runner"
   ]
 }
