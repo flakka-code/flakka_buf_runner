@@ -21,11 +21,19 @@ jobs:
     with:
       includes: "**/*.md"
       modified_files_only: false
-  setup-action:
+#  setup-action:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: bufbuild/buf-setup-action@v1
+  dart_test:
     runs-on: ubuntu-latest
     steps:
-      - uses: bufbuild/buf-setup-action@v1
+      - uses: actions/checkout@v4
+#      - uses: taiki-e/install-action@just
+      - uses: dart-lang/setup-dart@v1
+      - uses: bufbuild/buf-setup-action@v1.31.0
+      - run: dart test
 
-  build:
-    needs: setup-action
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
+#  build:
+#    needs: setup-action
+#    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
