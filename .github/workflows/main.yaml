@@ -21,7 +21,10 @@ jobs:
     with:
       includes: "**/*.md"
       modified_files_only: false
-
-  build:
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
-
+  dart_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+      - uses: bufbuild/buf-setup-action@v1.31.0
+      - run: dart test
