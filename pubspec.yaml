@@ -1,15 +1,14 @@
 name: flakka_buf_runner
 description: A run-process helper for using the buf CLI
 version: 0.2.0-alpha.1
-publish_to: none
-
+repository: https://github.com/flakka-code/flakka_buf_runner
 environment:
   sdk: "^3.3.0"
 
 dependencies:
-  glob:
-  path:
-  scratch_space:
+  glob: ^2.1.2
+  path: ^1.9.0
+  scratch_space: ^1.0.2
 
 dev_dependencies:
   test: ^1.25.2
