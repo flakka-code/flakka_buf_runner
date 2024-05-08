@@ -6,6 +6,18 @@ publish_to: none
 environment:
   sdk: "^3.3.0"
 
+dependencies:
+  build:
+  build_config:
+  build_runner:
+  build_runner_core:
+  build_test:
+  glob:
+  package_config:
+  path:
+#  path_provider:
+  scratch_space:
+
 dev_dependencies:
   mocktail: ^1.0.3
   test: ^1.25.2
