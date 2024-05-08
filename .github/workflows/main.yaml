@@ -21,9 +21,11 @@ jobs:
     with:
       includes: "**/*.md"
       modified_files_only: false
-
-  build:
+  setup-action:
     runs-on: ubuntu-latest
     steps:
       - uses: bufbuild/buf-setup-action@v1
-      - uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
+
+  build:
+    needs: setup-action
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
